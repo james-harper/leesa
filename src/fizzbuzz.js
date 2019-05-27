@@ -2,9 +2,14 @@ import Constants from './constants';
 
 /**
  * @param {number} number
+ * @throws {TypeError} number must be an integer
  * @returns {string|number}
  */
 export const convert = (number) => {
+  if (!Number.isInteger(number)) {
+    throw new TypeError('Unable to convert non-integer');
+  }
+
   switch (true) {
     case (number % 15 === 0):
       return Constants.LEESASLEEP;
