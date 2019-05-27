@@ -1,17 +1,18 @@
 import Constants from './constants';
 
+/**
+ * @param {number} number
+ * @returns {string|number}
+ */
 export const convert = (number) => {
-  if (number % 15 === 0) {
-    return Constants.LEESASLEEP;
+  switch (true) {
+    case (number % 15 === 0):
+      return Constants.LEESASLEEP;
+    case (number % 3 === 0):
+      return Constants.LEESA;
+    case (number % 5 === 0):
+      return Constants.SLEEP;
+    default:
+      return number;
   }
-
-  if (number % 5 === 0) {
-    return Constants.SLEEP;
-  }
-
-  if (number % 3 === 0) {
-    return Constants.LEESA;
-  }
-
-  return number;
 }
