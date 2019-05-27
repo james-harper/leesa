@@ -1,6 +1,10 @@
 import Constants from './constants';
 
 export const convert = (number) => {
+  if (number % 15 === 0) {
+    return Constants.LEESASLEEP;
+  }
+
   if (number % 5 === 0) {
     return Constants.SLEEP;
   }

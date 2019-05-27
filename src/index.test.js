@@ -19,4 +19,9 @@ describe('fizz buzz tests', () => {
     expect(convert(5)).toBe(Constants.SLEEP);
     expect(convert(50)).toBe(Constants.SLEEP);
   });
+
+  it('outputs "LeesaSleep" if the number is a multiple of both 3 and 5', () => {
+    expect(convert(15)).toBe(Constants.LEESASLEEP);
+    expect(convert(90)).toBe(Constants.LEESASLEEP);
+  });
 });
