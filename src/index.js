@@ -1,18 +1,5 @@
-import Constants from './constants';
+import fizzBuzz from './fizzbuzz';
 
-/**
- * @param {number} number
- * @returns {string|number}
- */
-export const convert = (number) => {
-  switch (true) {
-    case (number % 15 === 0):
-      return Constants.LEESASLEEP;
-    case (number % 3 === 0):
-      return Constants.LEESA;
-    case (number % 5 === 0):
-      return Constants.SLEEP;
-    default:
-      return number;
-  }
-}
+console.log(
+  fizzBuzz(100)
+);
