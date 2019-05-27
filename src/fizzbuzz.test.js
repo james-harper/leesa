@@ -24,6 +24,12 @@ describe('Test number conversions', () => {
     expect(convert(15)).toBe(Constants.LEESASLEEP);
     expect(convert(90)).toBe(Constants.LEESASLEEP);
   });
+
+  it('throws an error when trying to convert a non-integer', () => {
+    expect(() => {
+      convert(3.14);
+    }).toThrow('Unable to convert non-integer');
+  });
 });
 
 describe('Test sequence generation', () => {
